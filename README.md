@@ -1,70 +1,156 @@
-# Getting Started with Create React App
+React & Laravel Passport Authentication
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Overview
 
-## Available Scripts
+This project implements user authentication using React.js for the frontend and Laravel Passport for the backend. It includes features like user registration, login, logout, and token-based authentication using Laravel Passport.
 
-In the project directory, you can run:
+Features
 
-### `npm start`
+User Registration & Login
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Secure Authentication with Laravel Passport
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+Protected Routes in React
 
-### `npm test`
+Token-based Authorization
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Persistent Login State with Local Storage
 
-### `npm run build`
+Logout Functionality
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Tech Stack
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Frontend
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+React.js
 
-### `npm run eject`
+React Router for navigation
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+Axios for API requests
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Bootstrap for UI styling
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+Backend
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+Laravel 10
 
-## Learn More
+Laravel Passport for API authentication
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+MySQL as the database
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+Composer for dependency management
 
-### Code Splitting
+Installation & Setup
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+Backend (Laravel)
 
-### Analyzing the Bundle Size
+Clone the repository & navigate to the backend folder
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+git clone https://github.com/yourusername/authentication-project.git
+cd authentication-project/backend
 
-### Making a Progressive Web App
+Install dependencies
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+composer install
 
-### Advanced Configuration
+Set up the environment file
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+cp .env.example .env
 
-### Deployment
+Configure your database settings in .env:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+DB_DATABASE=passport1
+DB_USERNAME=root
+DB_PASSWORD=''
 
-### `npm run build` fails to minify
+Run database migrations
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+php artisan migrate
+
+Install Passport & generate keys
+
+php artisan passport:install
+
+Run the Laravel development server
+
+php artisan serve
+
+Frontend (React.js)
+
+Navigate to the frontend folder
+
+cd ../frontend
+
+Install dependencies
+
+npm install
+
+Start the React development server
+
+npm start
+
+API Endpoints
+
+Authentication Routes
+
+Method
+
+Endpoint
+
+Description
+
+POST
+
+/api/register
+
+Register a new user
+
+POST
+
+/api/login
+
+Authenticate user
+
+POST
+
+/api/logout
+
+Logout user
+
+GET
+
+/api/user
+
+Get authenticated user
+
+Usage
+
+Open http://localhost:3000 for the React app.
+
+The Laravel API runs on http://localhost:8000.
+
+After login, the JWT token is stored in localStorage and used for authenticated requests.
+
+Project Structure
+
+ authentication-project/
+ ├── backend/ (Laravel API)
+ │   ├── app/
+ │   ├── database/
+ │   ├── routes/
+ │   ├── .env
+ │   └── composer.json
+ ├── frontend/ (React App)
+ │   ├── src/
+ │   ├── public/
+ │   ├── package.json
+ │   └── .env
+ ├── README.md
+
+Contributing
+
+Feel free to fork this project and submit pull requests.
+
+Author
+
+Aryan Kumar
