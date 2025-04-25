@@ -10,4 +10,4 @@ class Reset extends Component {
   }
 }
 
-export default Reset
+export default Reset;

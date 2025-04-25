@@ -3,12 +3,24 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@emotion/react": "^11.14.0",
+    "@emotion/styled": "^11.14.0",
+    "@mui/icons-material": "^7.0.2",
+    "@mui/material": "^7.0.2",
+    "@reduxjs/toolkit": "^2.7.0",
+    "@tailwindcss/vite": "^4.1.4",
     "axios": "^1.7.9",
+    "bootstrap": "^5.3.5",
     "cra-template": "1.2.0",
+    "framer-motion": "^12.8.0",
     "react": "^19.0.0",
+    "react-bootstrap": "^2.10.9",
     "react-dom": "^19.0.0",
+    "react-hook-form": "^7.56.0",
+    "react-redux": "^9.2.0",
     "react-router-dom": "^7.1.5",
-    "react-scripts": "5.0.1"
+    "react-scripts": "5.0.1",
+    "styled-components": "^6.1.17"
   },
   "scripts": {
     "start": "react-scripts start",
@@ -33,5 +45,8 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "tailwindcss": "^3.4.17"
   }
 }

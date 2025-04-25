@@ -4,6 +4,8 @@ import './index.css';
 import App from './App';
 import Header from "./common/Header";
 import { BrowserRouter } from "react-router-dom";
+import Footer from './components/footer';
+
 
 import axios from 'axios';
 
@@ -18,6 +20,10 @@ root.render(
     {/* <App /> */}
     
     <Header/>
+    <Footer/>
+
   </React.StrictMode>
 );
+
+
 
